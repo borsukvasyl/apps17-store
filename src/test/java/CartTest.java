@@ -15,14 +15,14 @@ public class CartTest {
     public void addComputerGame1() throws Exception {
         ComputerGame computerGame = new ComputerGame(ComputerGameParamsCreator.initializeGameParams1());
         cart.addComputerGame(computerGame);
-        assertEquals(cart.computerGames.get(0), computerGame);
+        assertEquals(cart.getComputerGames().get(0), computerGame);
     }
 
     @Test
     public void addComputerGame2() throws Exception {
         ComputerGame computerGame = new ComputerGame(ComputerGameParamsCreator.initializeGameParams2());
         cart.addComputerGame(computerGame);
-        assertEquals(cart.computerGames.get(1), computerGame);
+        assertEquals(cart.getComputerGames().get(1), computerGame);
     }
 
     private boolean search(ComputerGameParams searchParams) {

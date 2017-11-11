@@ -4,7 +4,7 @@ public enum Platform {
 
     private String name;
 
-    Platform(String name){
+    Platform(String name) {
         this.name = name;
     }
 
