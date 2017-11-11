@@ -10,7 +10,7 @@ public class Cart {
     public ArrayList<ComputerGame> search(ComputerGameParams searchParams) {
         ArrayList<ComputerGame> matching = new ArrayList<ComputerGame>();
         for (ComputerGame computerGame: computerGames) {
-            if (computerGame.getGameParams().matches(searchParams)){
+            if (computerGame.getGameParams().matches(searchParams)) {
                 matching.add(computerGame);
             }
         }

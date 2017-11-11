@@ -5,8 +5,7 @@ public class ComputerGame {
     private final ComputerGameParams gameParams;
 
     public ComputerGame(ComputerGameParams gameParams) {
-        this.id = idCounter;
-        idCounter++;
+        this.id = ComputerGame.idCounter++;
         this.gameParams = gameParams;
     }
 

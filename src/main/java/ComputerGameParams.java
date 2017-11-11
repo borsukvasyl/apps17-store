@@ -28,12 +28,12 @@ public class ComputerGameParams {
         if (ageRestriction != otherParams.getAgeRestriction()) {
             return false;
         }
-        if (!(genres.containsAll(otherParams.getGenres()) &&
-                otherParams.getGenres().containsAll(genres))) {
+        if (!(genres.containsAll(otherParams.getGenres())
+                && otherParams.getGenres().containsAll(genres))) {
             return false;
         }
-        if (!(platforms.containsAll(otherParams.getPlatforms()) &&
-                otherParams.getPlatforms().containsAll(platforms))) {
+        if (!(platforms.containsAll(otherParams.getPlatforms())
+                && otherParams.getPlatforms().containsAll(platforms))) {
             return false;
         }
         return true;
