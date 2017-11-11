@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ComputerGameTest {
     @BeforeClass
-    public void beforeClass() {
+    public static void beforeClass() {
         ComputerGame.main(new String[] {});
     }
 
