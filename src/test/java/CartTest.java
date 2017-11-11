@@ -7,7 +7,7 @@ public class CartTest {
     private static Cart cart = new Cart();
 
     @BeforeClass
-    public void beforeClass() {
+    public static void beforeClass() {
         ComputerGame.main(new String[] {});
     }
 
