@@ -1,9 +1,15 @@
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class CartTest {
     private static Cart cart = new Cart();
+
+    @BeforeClass
+    public void beforeClass() {
+        ComputerGame.main(new String[] {});
+    }
 
     @Test
     public void addComputerGame1() throws Exception {

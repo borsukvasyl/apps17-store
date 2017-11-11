@@ -1,9 +1,15 @@
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
 
 public class ComputerGameTest {
+    @BeforeClass
+    public void beforeClass() {
+        ComputerGame.main(new String[] {});
+    }
+
     @Test
     public void constructorInitialization1() {
         ComputerGameParams gameParams = ComputerGameParamsCreator.initializeGameParams1();

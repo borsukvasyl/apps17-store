@@ -1,7 +1,7 @@
 public class ComputerGame {
     private static int idCounter;
 
-    private int id;
+    private final int id;
     private final ComputerGameParams gameParams;
 
     public ComputerGame(ComputerGameParams gameParams) {
@@ -15,5 +15,9 @@ public class ComputerGame {
 
     public int getId() {
         return id;
+    }
+
+    public static void main(String[] args) {
+        idCounter = 0;
     }
 }
