@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
@@ -14,13 +16,48 @@ public class ComputerGameParamsTest {
     }
 
     @Test
-    public void matches1() throws Exception {
+    public void matchesTheSameObject() throws Exception {
         assertTrue(params.matches(params));
     }
 
     @Test
-    public void matches2() throws Exception {
+    public void matchesDifferentObjects() throws Exception {
         ComputerGameParams otherParams = ComputerGameParamsCreator.initializeGameParams2();
+        assertFalse(params.matches(otherParams));
+    }
+
+    @Test
+    public void matchesDifferentNames() throws Exception {
+        ComputerGameParams otherParams = ComputerGameParamsCreator.initializeGameParams1();
+        otherParams.setName("WOT");
+        assertFalse(params.matches(otherParams));
+    }
+
+    @Test
+    public void matchesDifferentPrice() throws Exception {
+        ComputerGameParams otherParams = ComputerGameParamsCreator.initializeGameParams1();
+        otherParams.setPrice(10);
+        assertFalse(params.matches(otherParams));
+    }
+
+    @Test
+    public void matchesDifferentAgeRestriction() throws Exception {
+        ComputerGameParams otherParams = ComputerGameParamsCreator.initializeGameParams1();
+        otherParams.setAgeRestriction(18);
+        assertFalse(params.matches(otherParams));
+    }
+
+    @Test
+    public void matchesDifferentGenres() throws Exception {
+        ComputerGameParams otherParams = ComputerGameParamsCreator.initializeGameParams1();
+        otherParams.setGenres(new ArrayList<Genre>() {{add(Genre.ACTION);}});
+        assertFalse(params.matches(otherParams));
+    }
+
+    @Test
+    public void matchesDifferentPlatforms() throws Exception {
+        ComputerGameParams otherParams = ComputerGameParamsCreator.initializeGameParams1();
+        otherParams.setPlatforms(new ArrayList<Platform>() {{add(Platform.MACOS);}});
         assertFalse(params.matches(otherParams));
     }
 
@@ -69,5 +106,34 @@ public class ComputerGameParamsTest {
     public void setAgeRestriction() throws Exception {
         params.setAgeRestriction(18);
         assertEquals(params.getAgeRestriction(), 18);
+    }
+
+    @Test
+    public void getGenres() throws Exception {
+        assertTrue(params.getGenres().contains(Genre.ACTION)
+                && params.getGenres().contains(Genre.MMORPG));
+    }
+
+    @Test
+    public void setGenres() throws Exception {
+        ArrayList<Genre> newGenres = new ArrayList<Genre>() {{add(Genre.ACTION);}};
+        params.setGenres(newGenres);
+        assertTrue(params.getGenres().containsAll(newGenres)
+                && newGenres.containsAll(params.getGenres()));
+    }
+
+    @Test
+    public void getPlatforms() throws Exception {
+        assertTrue(params.getPlatforms().contains(Platform.WINDOWS)
+                && params.getPlatforms().contains(Platform.MACOS)
+                && params.getPlatforms().contains(Platform.LINUX));
+    }
+
+    @Test
+    public void setPlatforms() throws Exception {
+        ArrayList<Platform> newPlatforms = new ArrayList<Platform>() {{add(Platform.WINDOWS);}};
+        params.setPlatforms(newPlatforms);
+        assertTrue(params.getPlatforms().containsAll(newPlatforms)
+                && newPlatforms.containsAll(params.getPlatforms()));
     }
 }
