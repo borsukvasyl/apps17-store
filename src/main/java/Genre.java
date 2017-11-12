@@ -1,5 +1,5 @@
 public enum Genre {
-    MOBA("MOBA"), MMORPG("MMORPG"), ACTION("ACTION"), SIMULATOR("SIMULATOR");
+    MMORPG("MMORPG"), ACTION("ACTION");
 
     private String name;
 
