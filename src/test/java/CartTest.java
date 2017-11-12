@@ -1,7 +1,9 @@
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 public class CartTest {
     private static Cart cart = new Cart();
@@ -15,14 +17,14 @@ public class CartTest {
     public void addComputerGame1() throws Exception {
         ComputerGame computerGame = new ComputerGame(ComputerGameParamsCreator.initializeGameParams1());
         cart.addComputerGame(computerGame);
-        assertEquals(cart.getComputerGames().get(0), computerGame);
+        assertEquals(computerGame, cart.getComputerGames().get(0));
     }
 
     @Test
     public void addComputerGame2() throws Exception {
         ComputerGame computerGame = new ComputerGame(ComputerGameParamsCreator.initializeGameParams2());
         cart.addComputerGame(computerGame);
-        assertEquals(cart.getComputerGames().get(1), computerGame);
+        assertEquals(computerGame, cart.getComputerGames().get(1));
     }
 
     private boolean search(ComputerGameParams searchParams) {
@@ -36,11 +38,11 @@ public class CartTest {
 
     @Test
     public void search1() throws Exception {
-        assertEquals(search(ComputerGameParamsCreator.initializeGameParams1()), true);
+        assertTrue(search(ComputerGameParamsCreator.initializeGameParams1()));
     }
 
     @Test
     public void search2() throws Exception {
-        assertEquals(search(ComputerGameParamsCreator.initializeGameParams3()), false);
+        assertFalse(search(ComputerGameParamsCreator.initializeGameParams3()));
     }
 }

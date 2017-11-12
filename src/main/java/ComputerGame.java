@@ -5,8 +5,12 @@ public class ComputerGame {
     private final ComputerGameParams gameParams;
 
     public ComputerGame(ComputerGameParams gameParams) {
-        this.id = ComputerGame.idCounter++;
+        this.id = ComputerGame.idCounterIncrement();
         this.gameParams = gameParams;
+    }
+
+    private static int idCounterIncrement() {
+        return idCounter++;
     }
 
     public ComputerGameParams getGameParams() {

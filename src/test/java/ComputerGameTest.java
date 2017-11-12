@@ -15,7 +15,7 @@ public class ComputerGameTest {
         ComputerGameParams gameParams = ComputerGameParamsCreator.initializeGameParams1();
         ComputerGame computerGame = new ComputerGame(gameParams);
         assertTrue(computerGame.getGameParams().matches(gameParams));
-        assertEquals(computerGame.getId(), 0);
+        assertEquals(0, computerGame.getId());
     }
 
     @Test
@@ -23,6 +23,6 @@ public class ComputerGameTest {
         ComputerGameParams gameParams = ComputerGameParamsCreator.initializeGameParams2();
         ComputerGame computerGame = new ComputerGame(gameParams);
         assertTrue(computerGame.getGameParams().matches(gameParams));
-        assertEquals(computerGame.getId(), 1);
+        assertEquals(1, computerGame.getId());
     }
 }

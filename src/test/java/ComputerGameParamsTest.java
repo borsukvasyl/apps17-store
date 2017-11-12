@@ -63,13 +63,13 @@ public class ComputerGameParamsTest {
 
     @Test
     public void testToString() {
-        assertEquals(params.toString(),
-                "name: World of Tanks\n" +
+        assertEquals("name: World of Tanks\n" +
                 "description: MMO action game\n" +
                 "price: 0\n" +
                 "age: 12\n" +
                 "genres: [MMORPG, ACTION]\n" +
-                "platforms: [WINDOWS, MACOS, LINUX]");
+                "platforms: [WINDOWS, MACOS, LINUX]",
+                params.toString());
     }
 
     /*
@@ -77,46 +77,46 @@ public class ComputerGameParamsTest {
     * */
     @Test
     public void getName() throws Exception {
-        assertEquals(params.getName(), "World of Tanks");
+        assertEquals("World of Tanks", params.getName());
     }
 
     @Test
     public void setName() throws Exception {
         params.setName("WOT");
-        assertEquals(params.getName(), "WOT");
+        assertEquals("WOT", params.getName());
     }
 
     @Test
     public void getDescription() throws Exception {
-        assertEquals(params.getDescription(), "MMO action game");
+        assertEquals("MMO action game", params.getDescription());
     }
 
     @Test
     public void setDescription() throws Exception {
         params.setDescription("Game");
-        assertEquals(params.getDescription(), "Game");
+        assertEquals("Game", params.getDescription());
     }
 
     @Test
     public void getPrice() throws Exception {
-        assertEquals(params.getPrice(), 0);
+        assertEquals(0, params.getPrice());
     }
 
     @Test
     public void setPrice() throws Exception {
         params.setPrice(100);
-        assertEquals(params.getPrice(), 100);
+        assertEquals(100, params.getPrice());
     }
 
     @Test
     public void getAgeRestriction() throws Exception {
-        assertEquals(params.getAgeRestriction(), 12);
+        assertEquals(12, params.getAgeRestriction());
     }
 
     @Test
     public void setAgeRestriction() throws Exception {
         params.setAgeRestriction(18);
-        assertEquals(params.getAgeRestriction(), 18);
+        assertEquals(18, params.getAgeRestriction());
     }
 
     @Test
