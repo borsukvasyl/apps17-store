@@ -61,6 +61,17 @@ public class ComputerGameParamsTest {
         assertFalse(params.matches(otherParams));
     }
 
+    @Test
+    public void testToString() {
+        assertEquals(params.toString(),
+                "name: World of Tanks\n" +
+                "description: MMO action game\n" +
+                "price: 0\n" +
+                "age: 12\n" +
+                "genres: [MMORPG, ACTION]\n" +
+                "platforms: [WINDOWS, MACOS, LINUX]");
+    }
+
     /*
     * Getters and setters
     * */

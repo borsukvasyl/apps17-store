@@ -39,6 +39,11 @@ public class ComputerGameParams {
         return true;
     }
 
+    public String toString() {
+        return String.format("name: %s\ndescription: %s\nprice: %d\nage: %d\ngenres: %s\nplatforms: %s",
+                name, description, price, ageRestriction, genres, platforms);
+    }
+
     public String getName() { return name; }
 
     public void setName(String newName) { this.name = newName; }
