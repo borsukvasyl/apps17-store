@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
@@ -22,7 +23,10 @@ public class ComputerGameParamsTest {
         ComputerGameParams otherParams = ComputerGameParamsCreator.initializeGameParams2();
         assertFalse(params.matches(otherParams));
     }
-/*
+
+    /*
+    * Getters and setters
+    * */
     @Test
     public void getName() throws Exception {
         assertEquals(params.getName(), "World of Tanks");
@@ -41,39 +45,29 @@ public class ComputerGameParamsTest {
 
     @Test
     public void setDescription() throws Exception {
-        params
+        params.setDescription("Game");
+        assertEquals(params.getDescription(), "Game");
     }
 
     @Test
     public void getPrice() throws Exception {
+        assertEquals(params.getPrice(), 0);
     }
 
     @Test
     public void setPrice() throws Exception {
+        params.setPrice(100);
+        assertEquals(params.getPrice(), 100);
     }
 
     @Test
     public void getAgeRestriction() throws Exception {
+        assertEquals(params.getAgeRestriction(), 12);
     }
 
     @Test
     public void setAgeRestriction() throws Exception {
+        params.setAgeRestriction(18);
+        assertEquals(params.getAgeRestriction(), 18);
     }
-
-    @Test
-    public void getGenres() throws Exception {
-    }
-
-    @Test
-    public void setGenres() throws Exception {
-    }
-
-    @Test
-    public void getPlatforms() throws Exception {
-    }
-
-    @Test
-    public void setPlatforms() throws Exception {
-    }
-    */
 }

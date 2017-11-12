@@ -29,6 +29,7 @@ public class CartTest {
         boolean result = false;
         for (ComputerGame computerGame: cart.search(searchParams)) {
             if (computerGame.getGameParams().matches(searchParams)) result = true;
+            else break;
         }
         return result;
     }
