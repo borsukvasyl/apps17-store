@@ -1,3 +1,7 @@
+import game.ComputerGameParams;
+import game.Genre;
+import game.Platform;
+
 import java.util.ArrayList;
 
 public class ComputerGameParamsCreator {

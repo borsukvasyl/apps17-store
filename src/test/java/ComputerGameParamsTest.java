@@ -1,3 +1,6 @@
+import game.ComputerGameParams;
+import game.Genre;
+import game.Platform;
 import org.junit.Before;
 import org.junit.Test;
 

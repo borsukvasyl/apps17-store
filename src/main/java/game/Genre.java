@@ -1,3 +1,5 @@
+package game;
+
 public enum Genre {
     MMORPG("MMORPG"), ACTION("ACTION");
 

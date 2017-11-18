@@ -1,3 +1,5 @@
+package game;
+
 public enum Platform {
     WINDOWS("WINDOWS"), MACOS("MACOS"), LINUX("LINUX"),
     IOS("IOS"), ANDROID("ANDROID");

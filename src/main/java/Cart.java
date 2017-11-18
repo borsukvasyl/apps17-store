@@ -1,23 +1,15 @@
-import java.util.ArrayList;
+import deliveryStrategy.DeliveryStrategy;
+import paymentStrategy.PaymentStrategy;
 
-public class Cart {
-    private final ArrayList<ComputerGame> computerGames = new ArrayList<ComputerGame>();
+public interface Cart {
+    double computeTotalPrice();
 
-    public void addComputerGame(ComputerGame computerGame) {
-        computerGames.add(computerGame);
-    }
+    boolean pay();
 
-    public ArrayList<ComputerGame> search(ComputerGameParams searchParams) {
-        ArrayList<ComputerGame> matching = new ArrayList<ComputerGame>();
-        for (ComputerGame computerGame: computerGames) {
-            if (computerGame.getGameParams().matches(searchParams)) {
-                matching.add(computerGame);
-            }
-        }
-        return matching;
-    }
+    boolean ship();
 
-    public ArrayList<ComputerGame> getComputerGames() {
-        return computerGames;
-    }
+    PaymentStrategy getPaymentStrategy();
+    void setPaymentStrategy(PaymentStrategy paymentStrategy);
+    DeliveryStrategy getDeliveryStrategy();
+    void setDeliveryStrategy(DeliveryStrategy deliveryStrategy);
 }

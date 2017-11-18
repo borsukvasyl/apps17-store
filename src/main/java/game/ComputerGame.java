@@ -1,3 +1,5 @@
+package game;
+
 public class ComputerGame {
     private static int idCounter;
 

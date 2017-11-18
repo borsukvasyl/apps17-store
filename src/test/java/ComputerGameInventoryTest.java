@@ -1,3 +1,5 @@
+import game.ComputerGame;
+import game.ComputerGameParams;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -5,8 +7,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
-public class CartTest {
-    private static Cart cart = new Cart();
+public class ComputerGameInventoryTest {
+    private static ComputerGameInventory computerGameInventory = new ComputerGameInventory();
 
     @BeforeClass
     public static void beforeClass() {
@@ -16,20 +18,20 @@ public class CartTest {
     @Test
     public void addComputerGame1() throws Exception {
         ComputerGame computerGame = new ComputerGame(ComputerGameParamsCreator.initializeGameParams1());
-        cart.addComputerGame(computerGame);
-        assertEquals(computerGame, cart.getComputerGames().get(0));
+        computerGameInventory.addComputerGame(computerGame);
+        assertEquals(computerGame, computerGameInventory.getComputerGames().get(0));
     }
 
     @Test
     public void addComputerGame2() throws Exception {
         ComputerGame computerGame = new ComputerGame(ComputerGameParamsCreator.initializeGameParams2());
-        cart.addComputerGame(computerGame);
-        assertEquals(computerGame, cart.getComputerGames().get(1));
+        computerGameInventory.addComputerGame(computerGame);
+        assertEquals(computerGame, computerGameInventory.getComputerGames().get(1));
     }
 
     private boolean search(ComputerGameParams searchParams) {
         boolean result = false;
-        for (ComputerGame computerGame: cart.search(searchParams)) {
+        for (ComputerGame computerGame: computerGameInventory.search(searchParams)) {
             if (computerGame.getGameParams().matches(searchParams)) result = true;
             else break;
         }
