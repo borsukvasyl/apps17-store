@@ -8,10 +8,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import game.ComputerGame;
-import paymentStrategy.CashStrategy;
-import paymentStrategy.PaymentStrategy;
-import deliveryStrategy.DeliveryDHL;
-import deliveryStrategy.DeliveryStrategy;
+import payment_strategy.CashStrategy;
+import payment_strategy.PaymentStrategy;
+import delivery_strategy.DeliveryDHL;
+import delivery_strategy.DeliveryStrategy;
 
 public class ComputerGameCartTest {
     private Cart cart;

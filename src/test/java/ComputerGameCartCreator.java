@@ -1,8 +1,8 @@
 import game.ComputerGame;
-import deliveryStrategy.DeliveryNovaPoshta;
-import deliveryStrategy.DeliveryDHL;
-import paymentStrategy.CashStrategy;
-import paymentStrategy.PayPalStrategy;
+import delivery_strategy.DeliveryNovaPoshta;
+import delivery_strategy.DeliveryDHL;
+import payment_strategy.CashStrategy;
+import payment_strategy.PayPalStrategy;
 
 import java.util.ArrayList;
 import java.util.List;

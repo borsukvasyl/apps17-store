@@ -1,6 +1,6 @@
-import deliveryStrategy.DeliveryStrategy;
+import delivery_strategy.DeliveryStrategy;
 import game.ComputerGame;
-import paymentStrategy.PaymentStrategy;
+import payment_strategy.PaymentStrategy;
 
 import java.util.List;
 
@@ -10,7 +10,8 @@ public class ComputerGameCart implements Cart {
     private PaymentStrategy paymentStrategy;
     private DeliveryStrategy deliveryStrategy;
 
-    public ComputerGameCart(List<ComputerGame> games, PaymentStrategy paymentStrategy, DeliveryStrategy deliveryStrategy) {
+    public ComputerGameCart(List<ComputerGame> games, PaymentStrategy paymentStrategy,
+                            DeliveryStrategy deliveryStrategy) {
         this.games = games;
         this.paymentStrategy = paymentStrategy;
         this.deliveryStrategy = deliveryStrategy;
@@ -38,15 +39,15 @@ public class ComputerGameCart implements Cart {
         return paymentStrategy;
     }
 
-    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
-        this.paymentStrategy = paymentStrategy;
+    public void setPaymentStrategy(PaymentStrategy newPaymentStrategy) {
+        this.paymentStrategy = newPaymentStrategy;
     }
 
     public DeliveryStrategy getDeliveryStrategy() {
         return deliveryStrategy;
     }
 
-    public void setDeliveryStrategy(DeliveryStrategy deliveryStrategy) {
-        this.deliveryStrategy = deliveryStrategy;
+    public void setDeliveryStrategy(DeliveryStrategy newDeliveryStrategy) {
+        this.deliveryStrategy = newDeliveryStrategy;
     }
 }

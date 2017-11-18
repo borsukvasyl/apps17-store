@@ -1,5 +1,5 @@
-import deliveryStrategy.DeliveryStrategy;
-import paymentStrategy.PaymentStrategy;
+import delivery_strategy.DeliveryStrategy;
+import payment_strategy.PaymentStrategy;
 
 public interface Cart {
     double computeTotalPrice();
@@ -9,7 +9,7 @@ public interface Cart {
     boolean ship();
 
     PaymentStrategy getPaymentStrategy();
-    void setPaymentStrategy(PaymentStrategy paymentStrategy);
+    void setPaymentStrategy(PaymentStrategy newPaymentStrategy);
     DeliveryStrategy getDeliveryStrategy();
-    void setDeliveryStrategy(DeliveryStrategy deliveryStrategy);
+    void setDeliveryStrategy(DeliveryStrategy newDeliveryStrategy);
 }

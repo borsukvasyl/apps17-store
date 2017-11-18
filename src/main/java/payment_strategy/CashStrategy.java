@@ -1,4 +1,4 @@
-package paymentStrategy;
+package payment_strategy;
 
 public class CashStrategy implements PaymentStrategy {
     public boolean pay(double money) {

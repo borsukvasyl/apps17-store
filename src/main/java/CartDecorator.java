@@ -1,5 +1,5 @@
-import deliveryStrategy.DeliveryStrategy;
-import paymentStrategy.PaymentStrategy;
+import delivery_strategy.DeliveryStrategy;
+import payment_strategy.PaymentStrategy;
 
 public class CartDecorator implements Cart {
     private final Cart cart;
@@ -24,15 +24,15 @@ public class CartDecorator implements Cart {
         return cart.getPaymentStrategy();
     }
 
-    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
-        cart.setPaymentStrategy(paymentStrategy);
+    public void setPaymentStrategy(PaymentStrategy newPaymentStrategy) {
+        cart.setPaymentStrategy(newPaymentStrategy);
     }
 
     public DeliveryStrategy getDeliveryStrategy() {
         return cart.getDeliveryStrategy();
     }
 
-    public void setDeliveryStrategy(DeliveryStrategy deliveryStrategy) {
-        cart.setDeliveryStrategy(deliveryStrategy);
+    public void setDeliveryStrategy(DeliveryStrategy newDeliveryStrategy) {
+        cart.setDeliveryStrategy(newDeliveryStrategy);
     }
 }

@@ -4,17 +4,17 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import paymentStrategy.PayPalStrategy;
-import paymentStrategy.PaymentStrategy;
-import deliveryStrategy.DeliveryNovaPoshta;
-import deliveryStrategy.DeliveryStrategy;
+import payment_strategy.PayPalStrategy;
+import payment_strategy.PaymentStrategy;
+import delivery_strategy.DeliveryNovaPoshta;
+import delivery_strategy.DeliveryStrategy;
 
 public class CartDecoratorTest {
     private Cart cart;
 
     @Before
     public void setUp() throws Exception {
-        cart = ComputerGameCartCreator.initialize1();
+        cart = new CartDecorator(ComputerGameCartCreator.initialize1());
     }
 
     @Test
