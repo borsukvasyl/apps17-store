@@ -1,6 +1,5 @@
-import game.ComputerGameParams;
-import game.Genre;
-import game.Platform;
+package game;
+
 import org.junit.Before;
 import org.junit.Test;
 

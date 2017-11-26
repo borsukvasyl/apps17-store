@@ -1,10 +1,11 @@
 import delivery_strategy.DeliveryStrategy;
 import game.ComputerGame;
+import observable.Observable;
 import payment_strategy.PaymentStrategy;
 
 import java.util.List;
 
-public class ComputerGameCart implements Cart {
+public class ComputerGameCart extends Observable implements Cart {
     private List<ComputerGame> games;
 
     private PaymentStrategy paymentStrategy;

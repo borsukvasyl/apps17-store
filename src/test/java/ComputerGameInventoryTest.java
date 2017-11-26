@@ -1,5 +1,6 @@
 import game.ComputerGame;
 import game.ComputerGameParams;
+import game.ComputerGameParamsCreator;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

@@ -1,6 +1,7 @@
 import game.ComputerGame;
 import delivery_strategy.DeliveryNovaPoshta;
 import delivery_strategy.DeliveryDHL;
+import game.ComputerGameParamsCreator;
 import payment_strategy.CashStrategy;
 import payment_strategy.PayPalStrategy;
 

@@ -1,3 +1,5 @@
+package game;
+
 import game.ComputerGameParams;
 import game.Genre;
 import game.Platform;

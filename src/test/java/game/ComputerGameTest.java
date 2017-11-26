@@ -1,5 +1,5 @@
-import game.ComputerGame;
-import game.ComputerGameParams;
+package game;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
