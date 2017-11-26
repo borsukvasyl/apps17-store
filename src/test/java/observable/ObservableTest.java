@@ -14,9 +14,16 @@ public class ObservableTest {
     }
 
     @Test
-    public void addObserver() throws Exception {
+    public void addObserver1() throws Exception {
         observable.addObserver(new Customer());
         assertEquals(1, observable.getObservers().size());
+    }
+
+    @Test
+    public void addObserver2() throws Exception {
+        observable.addObserver(new Customer());
+        observable.addObserver(new Seller());
+        assertEquals(2, observable.getObservers().size());
     }
 
     @Test
@@ -30,6 +37,7 @@ public class ObservableTest {
     @Test
     public void notifyObservers() throws Exception {
         observable.addObserver(new Customer());
+        observable.addObserver(new Seller());
         observable.notifyObservers();
     }
 }
